@@ -9,11 +9,13 @@ import org.apache.logging.log4j.Logger;
 public enum IssueEnum {
   CUSTOMER_NOT_FOUND(1, "Cliente não encontrado."),
   CATEGORY_NOT_FOUND(2, "Categoria não encontrada."),
+  NEIGHBORHOOD_NOT_FOUND(2, "Bairro não encontrada."),
   ORDER_NOT_FOUND(3, "Pedido não encontrado"),
   PRODUCT_NOT_FOUND(4, "Produto não encontrado."),
   OPTION_NOT_FOUND(5, "Acrescimo não encontrado."),
   INVALID_OPTION(7, "Forneça um nome de acréscimo válido."),
   EXISTING_OPTION(8, "já existe um acréscimo cadastrado com esse nome"),
+  EXISTING_NEIGHBORHOOD(8, "já existe um Bairro cadastrado com esse nome"),
   CHECKOUT_NOT_FOUND(6, "Caixa não encontrado."),
   INVALID_CATEGORY(7, "Forneça um nome de categoria válido."),
   EXISTING_CATEGORY(8, "Categoria já cadastrada"),

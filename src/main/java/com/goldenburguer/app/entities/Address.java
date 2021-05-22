@@ -49,7 +49,8 @@ public class Address {
 
   @NotNull
   @ApiModelProperty(value = "Neighborhood")
-  private String neighborhood;
+  @ManyToOne
+  private Neighborhood neighborhood;
 
   @NotNull
   @ApiModelProperty(value = "City")

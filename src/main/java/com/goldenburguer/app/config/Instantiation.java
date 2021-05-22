@@ -24,9 +24,12 @@ public class Instantiation implements CommandLineRunner {
   private final AddressRepository addressRepository;
   private final OrderRepository orderRepository;
   private final ItemRepository itemRepository;
+  private final NeighborhoodRepository neighborhoodRepository;
 
   @Override
   public void run(String... args) throws Exception {
+
+    Neighborhood neighborhood = neighborhoodRepository.save(new Neighborhood(null,"Agua Branca",true));
 
     Address address =
         addressRepository.save(
@@ -39,7 +42,7 @@ public class Instantiation implements CommandLineRunner {
                 null,
                 null,
                 null,
-                "Agua Cinza",
+                    neighborhood,
                 "Contagem",
                 "MG",
                 true));

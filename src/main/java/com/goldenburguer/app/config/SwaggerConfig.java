@@ -27,6 +27,7 @@ public class SwaggerConfig {
   public static final String ORDER = "Order";
   public static final String ADDRESS = "Address";
   public static final String CHECKOUT = "Checkout";
+  public static final String NEIGHBORHOOD = "Neighborhood";
 
   @Bean
   public Docket api() {
@@ -43,7 +44,8 @@ public class SwaggerConfig {
         .tags(new Tag(ORDER, "Operations related to the manipulation of the Order entity."))
         .tags(new Tag(ADDRESS, "Operations related to the manipulation of the Address entity."))
         .tags(new Tag(CHECKOUT, "Operations related to the manipulation of the Checkout entity."))
-        .tags(new Tag(OPTION, "Operations related to the manipulation of the option entity."));
+        .tags(new Tag(OPTION, "Operations related to the manipulation of the option entity."))
+        .tags(new Tag(NEIGHBORHOOD, "Operations related to the manipulation of the neighborhood entity."));
   }
 
   @SuppressWarnings("rawtypes")

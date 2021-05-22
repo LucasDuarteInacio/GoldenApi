@@ -37,4 +37,8 @@ public class NotFoundException extends ApiException {
   public static NotFoundException addressNotFound() {
     return new NotFoundException(new Issue(IssueEnum.ADDRESS_NOT_FOUND));
   }
+
+  public static NotFoundException NeighborhoodNotFound() {
+    return new NotFoundException(new Issue(IssueEnum.NEIGHBORHOOD_NOT_FOUND));
+  }
 }

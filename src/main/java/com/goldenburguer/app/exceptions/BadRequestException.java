@@ -45,4 +45,8 @@ public class BadRequestException extends ApiException {
   public static BadRequestException existingOption() {
     return new BadRequestException(new Issue(IssueEnum.EXISTING_OPTION));
   }
+
+  public static BadRequestException existingNeighborhood() {
+    return new BadRequestException(new Issue(IssueEnum.EXISTING_NEIGHBORHOOD));
+  }
 }

@@ -18,7 +18,7 @@ public class AddressDTO {
   private String latitude;
   private String longitude;
   private String reference;
-  private String neighborhood;
+  private Integer idNeighborhood;
   private String city;
   private String state;
 
