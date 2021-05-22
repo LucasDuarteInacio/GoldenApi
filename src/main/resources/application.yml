@@ -1,0 +1,22 @@
+
+#Database connection
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-52-21-247-176.compute-1.amazonaws.com/dddkmve66s4f1s
+    username: gqpaupojeiaeso
+    password: 26c9a69ae4e0ac46ff6317bb2567ed46a68b7d827df0cd0b30c75bf4c2dcc101
+    platform: postgres
+
+#Connection Pool config
+    hikari:
+      maximum-pool-size: 2
+
+#Hibernate properties
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+#Timezone config
+  jackson:
+    time-zone: America/Sao_Paulo

@@ -1,0 +1,28 @@
+
+#Database connection
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-52-4-177-4.compute-1.amazonaws.com/d7evb7njjj0bo5
+    username: wtfcjxmuegnnnz
+    password: 17db09cbc38ebf4cfccd66d68056ad372eb31d49ce26339a73ec812e9ce7f3c1
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+
+
+
+#Connection Pool config
+    hikari:
+      maximum-pool-size: 2
+
+#Hibernate properties
+  jpa:
+    database-platform=org:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+#Timezone config
+  jackson:
+    time-zone: America/Sao_Paulo
