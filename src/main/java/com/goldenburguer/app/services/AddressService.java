@@ -38,23 +38,23 @@ public class AddressService {
     return repository.findAddressByCustomer(idCustomer);
   }
 
-  public Address updateCustomer(AddressDTO addressDTO) {
+  public Address updateAddress(Address addressObj) {
 
-    findById(addressDTO.getId());
-    Neighborhood neighborhood = neighborhoodService.findById(addressDTO.getIdNeighborhood());
+    findById(addressObj.getId());
+    Neighborhood neighborhood = neighborhoodService.findById(addressObj.getNeighborhood().getId());
 
     Address address = Address.builder()
-            .id(addressDTO.getId())
-            .city(addressDTO.getCity())
-            .complement(addressDTO.getComplement())
-            .latitude(addressDTO.getLatitude())
-            .longitude(addressDTO.getLongitude())
+            .id(addressObj.getId())
+            .city(addressObj.getCity())
+            .complement(addressObj.getComplement())
+            .latitude(addressObj.getLatitude())
+            .longitude(addressObj.getLongitude())
             .neighborhood(neighborhood)
-            .number(addressDTO.getNumber())
-            .reference(addressDTO.getReference())
-            .state(addressDTO.getState())
-            .street(addressDTO.getStreet())
-            .zipCode(addressDTO.getZipCode())
+            .number(addressObj.getNumber())
+            .reference(addressObj.getReference())
+            .state(addressObj.getState())
+            .street(addressObj.getStreet())
+            .zipCode(addressObj.getZipCode())
             .build();
 
     return repository.save(address);

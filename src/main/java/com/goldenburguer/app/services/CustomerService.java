@@ -38,14 +38,9 @@ public class CustomerService {
 
   public Customer updateCustomer(CustomerDTO customerDTO) {
     Customer customer = findById(customerDTO.getId());
-
-    customer =
-        Customer.builder()
-            .id(customerDTO.getId())
-            .name(customerDTO.getName())
-            .address(customer.getAddress())
-            .status(true)
-            .build();
+    Address address = addressService.updateAddress(customerDTO.getAddress());
+    customer.setAddress(address);
+    customer.setName(customerDTO.getName());
 
     return repository.save(customer);
   }

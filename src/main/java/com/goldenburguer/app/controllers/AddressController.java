@@ -26,9 +26,5 @@ public class AddressController {
         return ResponseEntity.ok().body(address);
     }
 
-    @PutMapping
-    public ResponseEntity<Address> updateAddress (@RequestBody AddressDTO addressDTO){
-        Address address = service.updateCustomer(addressDTO);
-        return ResponseEntity.ok().body(address);
-    }
+
 }
